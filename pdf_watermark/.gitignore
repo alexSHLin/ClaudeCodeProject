@@ -1,0 +1,9 @@
+# 網頁版上傳與輸出的 PDF
+cache/
+
+# 本機要處理的 PDF 與輸出（測試檔可用 make_test_pdf.py 重新產生）
+PDF/
+
+.venv/
+__pycache__/
+.DS_Store

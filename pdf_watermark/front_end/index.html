@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PDF 浮水印</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="panel">
+    <h1>PDF 浮水印</h1>
+
+    <form id="form" class="grid" autocomplete="off">
+      <label for="pdf-display">要加浮水印的 PDF：</label>
+      <div>
+        <input id="pdf-display" type="text" readonly placeholder="按一下選取 PDF 檔">
+        <input id="pdf-file" type="file" accept="application/pdf,.pdf" hidden>
+      </div>
+
+      <label for="output-name">輸出檔名：</label>
+      <div class="with-suffix">
+        <input id="output-name" type="text" disabled placeholder="請先上傳 PDF">
+        <span class="suffix">.pdf</span>
+      </div>
+
+      <label for="wm-text">浮水印文字：</label>
+      <input id="wm-text" type="text" value="Confidential">
+
+      <label for="pages">頁碼：</label>
+      <input id="pages" type="text" inputmode="numeric" placeholder="全部頁面（例：1,3,5-7 或 5-）">
+
+      <span></span>
+      <div>
+        <button id="start" type="submit" disabled>開始</button>
+        <p id="status" class="status" role="status"></p>
+        <p id="result" class="result" hidden>
+          <a id="download" href="#">下載</a>
+        </p>
+      </div>
+    </form>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
