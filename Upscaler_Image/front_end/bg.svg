@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- 網點（halftone） -->
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="9" r="3.2" fill="#ff5c8a" opacity=".55"/>
+    </pattern>
+    <pattern id="dotsSmall" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="6" r="2" fill="#1b1b1b" opacity=".18"/>
+    </pattern>
+    <radialGradient id="burst" cx="50%" cy="50%" r="60%">
+      <stop offset="0" stop-color="#fff6a8"/>
+      <stop offset="1" stop-color="#ffd23f"/>
+    </radialGradient>
+    <mask id="fadeDots">
+      <radialGradient id="m" cx="85%" cy="15%" r="55%">
+        <stop offset="0" stop-color="#fff"/>
+        <stop offset="1" stop-color="#000"/>
+      </radialGradient>
+      <rect width="1600" height="1000" fill="url(#m)"/>
+    </mask>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#burst)"/>
+
+  <!-- 集中線 -->
+  <g stroke="#1b1b1b" stroke-width="3" opacity=".22">
+    <path d="M800 500 L-100 -200 M800 500 L200 -200 M800 500 L500 -200 M800 500 L800 -200 M800 500 L1100 -200 M800 500 L1400 -200 M800 500 L1700 -200
+             M800 500 L1800 150 M800 500 L1800 450 M800 500 L1800 750 M800 500 L1800 1100
+             M800 500 L1500 1200 M800 500 L1200 1200 M800 500 L900 1200 M800 500 L600 1200 M800 500 L300 1200 M800 500 L0 1200
+             M800 500 L-200 900 M800 500 L-200 600 M800 500 L-200 300 M800 500 L-200 50"/>
+  </g>
+  <g fill="#fff" opacity=".35">
+    <path d="M800 500 L-100 -60 L-100 40 Z M800 500 L1700 -60 L1700 60 Z M800 500 L1700 900 L1700 1040 Z M800 500 L-100 950 L-100 1100 Z M800 500 L650 -100 L760 -100 Z M800 500 L880 1100 L1000 1100 Z"/>
+  </g>
+
+  <!-- 網點區塊 -->
+  <rect width="1600" height="1000" fill="url(#dots)" mask="url(#fadeDots)"/>
+  <rect x="0" y="620" width="620" height="380" fill="url(#dotsSmall)"/>
+
+  <!-- 爆炸對話框 -->
+  <g transform="translate(170 170) rotate(-12)">
+    <path d="M0 -120 L28 -58 L95 -95 L70 -25 L140 -10 L75 22 L110 90 L38 60 L20 130 L-18 65 L-80 110 L-65 38 L-140 20 L-72 -12 L-110 -80 L-38 -55 Z"
+          fill="#ff3b3b" stroke="#1b1b1b" stroke-width="7" stroke-linejoin="round"/>
+    <text x="0" y="16" text-anchor="middle" font-family="Impact, 'Arial Black', sans-serif" font-size="54" fill="#fff" stroke="#1b1b1b" stroke-width="3" paint-order="stroke">POW!</text>
+  </g>
+  <g transform="translate(1420 820) rotate(10)">
+    <path d="M0 -100 L22 -45 L80 -80 L60 -18 L118 -5 L62 20 L92 76 L30 50 L15 108 L-15 55 L-68 92 L-55 30 L-118 15 L-60 -10 L-92 -66 L-30 -45 Z"
+          fill="#3bc9ff" stroke="#1b1b1b" stroke-width="7" stroke-linejoin="round"/>
+    <text x="0" y="14" text-anchor="middle" font-family="Impact, 'Arial Black', sans-serif" font-size="44" fill="#fff" stroke="#1b1b1b" stroke-width="3" paint-order="stroke">ZOOM!</text>
+  </g>
+
+  <!-- 星星 -->
+  <g fill="#fff" stroke="#1b1b1b" stroke-width="5" stroke-linejoin="round">
+    <path transform="translate(1370 170) scale(1.2)" d="M0 -30 L9 -9 L30 0 L9 9 L0 30 L-9 9 L-30 0 L-9 -9 Z"/>
+    <path transform="translate(240 820) scale(.9)" d="M0 -30 L9 -9 L30 0 L9 9 L0 30 L-9 9 L-30 0 L-9 -9 Z"/>
+    <path transform="translate(1180 90) scale(.7)" d="M0 -30 L9 -9 L30 0 L9 9 L0 30 L-9 9 L-30 0 L-9 -9 Z"/>
+  </g>
+</svg>

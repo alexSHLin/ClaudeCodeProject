@@ -1,0 +1,12 @@
+# 網頁版上傳暫存
+cache/
+
+# 放大後的輸出圖
+upscale/
+
+.venv/
+__pycache__/
+.DS_Store
+
+# Real-ESRGAN 權重（首次執行自動下載）
+models/
